@@ -93,12 +93,22 @@ char* getEventType(int event) {
     switch (event) {
         case 1:
             return "exit";
+        case 5:
+            return "link";
+        case 6:
+            return "delete";
         case 14:
             return "access";
         case 22:
             return "readlink";
+        case 47:
+            return "make directory";
+        case 48:
+            return "remove directory";
         case 72:
             return "open/read";
+        case 77:
+            return "create";
         case 112:
             return "close";
     }
