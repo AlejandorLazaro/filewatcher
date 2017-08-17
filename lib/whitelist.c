@@ -29,6 +29,9 @@
 
 bool raiseAlertForFile(char* filePath) {
     if (fileFilter != NULL) {
+        if (filePath == NULL) {
+            filePath = "";
+        }
         if (!strcasestr(filePath, fileFilter)) {
             return false;
         }
